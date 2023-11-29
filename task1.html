@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="CSS/ass_styling.css">
+    <script src="https://kit.fontawesome.com/1bd7707dce.js" crossorigin="anonymous"></script>
+    <title>CMT119 - Intro to CT</title>
+  </head>
+  <body>
+
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <label class="CMT119">CMT119 - Harry Jacobs</label>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="task1.html" class="active">Intro to CT</a></li>
+          <li><a href="task2.html">Biography</a></li>
+          <li><a href="task3.html">Reflection</a></li>
+        </ul>
+    </nav>
+    <div class="subhead">
+      <h3>An introductory guide to Computational Thinking and why it is important
+      </h3>
+    </div>
+    <div class="answer">
+      <div id="Task_1">
+        <div class="intro">
+          <h4>Introduction</h4>
+          <p>The term Computational Thinking refers to the human approach to understanding complex problems, so that a solution may be designed that could be understood by both and computers.
+            There are four fundamental features of Computational Thinking that help us to tackle these problems.
+          </p>
+          <div>
+            <dl>
+              <dt><strong>Decomposition </strong></dt>
+              <dd>Breaking the problem down into simpler and more manageable parts</dd>
+              <dt><strong>Pattern recognition</strong> </dt>
+              <dd>Finding similarities in problems so we can apply similar logic</dd>
+              <dt><strong>Abstraction</strong> </dt>
+              <dd>Focusing on what we need to know and understand and ignoring irrelevant information</dd>
+              <dt><strong>Algorithms</strong> </dt>
+              <dd>Producing step-by-step instructions that can be programmed to solve the problem</dd>
+            </dl>
+            <p> <sub> <a href="#references"> [1] </a> </sub> </p>
+          </div>
+          <div>
+            <p>
+  I will use a practical example to explain Computation Thinking and demonstrate its relevance and importance to future learning on this course and into my future career using an example problem from CMT120.
+            </p>
+          </div>
+        </div>
+        <span>
+          <p><i>Write code that prints out the numbers 1 - 1000, but if the number is divisible by 3 it prints <strong>‘fizz’</strong>,
+            if the number is divisible by 5 it prints <strong>‘buzz’</strong> and if the number is divisible by 3 and 5 it prints <strong>‘fizzbuzz’</strong>
+          </i></p>
+          <img src="fizzbuzz.png" alt="fizzbuzz">
+        </span>
+
+        <div class="decomposition">
+          <h4>Decomposition</h4>
+          <p>
+            Before trying to solve a large and complex problem it can be useful to break that problem down into smaller and simpler parts. In this example we can identify at least 4 components of the problem statement:
+          </p>
+          <ol type="1">
+            <li>Printing out the numbers 1 – 1000</li>
+            <li>Printing out the word <i>‘fizz’</i> in place of numbers that are divisible by 3</li>
+            <li>Printing out the word <i>‘buzz’</i> in place of numbers that are divisible by 5</li>
+            <li>Printing out the word <i>‘fizzbuzz’</i> in place of numbers that are divisible by both 3 and 5</li>
+          </ol>
+        </div>
+
+        <div class="pattern">
+          <h4>Pattern recognition</h4>
+          <p>
+            Problems 2 – 4 are very similar in their natural language wording and as we begin to write the code to solve these problem, we recognise that they share a similar pattern.
+          </p>
+          <ol>
+            <li>Printing a word in place of a number</li>
+            <li>Only printing the word if a certain condition is met (divisibility by 3, 5 or 3 & 5)</li>
+          </ol>
+
+        </div>
+
+        <div class="abstraction">
+          <h4>Abstraction</h4>
+          <p>
+            By focussing only on the relevant important information, we can save ourselves from becoming sidetracked by information we do not need or confused by information we do not understand.
+            Using an else (else console.log(i);) clause to finish the if, else if, else conditional block is a simple method of logging all numbers that are neither divisible by 3 or 5 without considering any other factors.
+          </p>
+        </div>
+
+        <div class="algorithm">
+          <h4>Algorithms</h4>
+          <p>
+            By decomposing the problem into its components, recognising the pattern that certain problems share and abstracting away from any unimportant details, we can formulate a concise step-by-step instruction to solve the problem.</p>
+          <ol>
+            <li>Use a for loop to iterate numbers 1-1000</li>
+            <li>print fizzbuzz if i % 3 and 5 = 0 (this has to come first or fizzbuzz will never be printed)</li>
+            <li>print fizz if i % 3 = 0</li>
+            <li>print buzz if i % 5 = 0</li>
+            <li>otherwise (else) print i</li>
+          </ol>
+        </div>
+
+        <div class="conclusion">
+          <h4>Conclusion</h4>
+          <p>
+            Computational Thinking has already proved to be a useful technique in solving-problems encountered within this course. Moving forward with the course and into my future career, I am sure to encounter more complex problems which will require a methodical approach. Utilising the four cornerstones of Computational Thinking will allow me to simplify, understand and solve increasingly more complex problems.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="references">
+      <h3>References</h3>
+      <ol>
+        <li><a href="https://www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1">BBC. 2023 What is computational thinking? - Introduction to computational thinking - KS3 Computer Science Revision - BBC Bitesize </a>[Accessed: 18 October 2023] </li>
+      </ol>
+    </div>
+
+
+    <footer>
+      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+      <a href="https://www.linkedin.com/in/harry-jacobs-8546b7198/" class="fa fa-linkedin"></a>
+    </footer>
+
+  </body>

@@ -1,0 +1,334 @@
+/* ALL and BACKGROUND */
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: verdana;
+  background-color: #B693A9;
+}
+
+/* NAV BAR */
+
+nav {
+  background: #1F2041;
+  height: 20vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+/* CMT "label" */
+label.CMT119 {
+  color: white;
+  font-size: 2rem;
+  line-height: 20vh;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul{
+  float: right;
+  margin-right: 3vw;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 20vh;
+  margin: 0 2vw;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  padding: 0.1rem;
+  border-radius: 2px;
+}
+
+a {
+  color: white;
+  transition: .5s ease-in-out;
+}
+
+
+a:hover, a.active {
+  background: #4B3F72;
+}
+/* using a check button to act as a hamburger menu - no display on wider screen */
+.checkbtn {
+  font-size: 2rem;
+  color: white;
+  float: right;
+  line-height: 20vh;
+  margin-right: 5vw;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+/* HOME MAIN - Styling */
+div.main {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+}
+
+div.main div {
+  margin: auto;
+  top: 45vh;
+  width: 30vw;
+  height: 40vh;
+  text-align: center;
+  color: white;
+  background-color: #0F6685;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 30px;
+  transition: .5s ease-in-out;
+}
+
+div.main div:hover {
+  background-color: #133D63;
+}
+div.subhead {
+  margin-top: 2vh;
+  padding-top: 2vh;
+  text-align: center;
+  text-decoration: underline;
+}
+div.answer div {
+  padding: 1vw;
+  margin: 1vw;
+}
+
+div.answer div a {
+  color: black;
+  text-decoration: underline;
+}
+
+div.answer span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* using a simple grid to display bio */
+div.bio {
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 0;
+  min-width: 600px;
+  max-width: 50vw;
+  display: grid;
+  grid-gap: 3vw;
+  border: solid black;
+  align-items: center;
+  grid-template:
+  [header-left] "name name name" 1fr [bio-right]
+  [img-left] "img img  bio" 1fr [bio-right]
+  [img-left] "img img  bio" 1fr [bio-right]
+    [img-left] "img img  bio" 1fr [bio-right]
+  / 50px 1fr;
+}
+
+div.bio h3 {
+  grid-area: name;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+div.bio img {
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-left: 3vw;
+  padding-bottom: 3vh;
+}
+div.bio ul {
+  grid-area: bio;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  line-height: 4vh;
+}
+
+div.answer {
+  margin: 5vw;
+}
+div.answer p sub a {
+  text-decoration: none;
+}
+
+#references {
+  margin: 5vw;
+}
+
+#references a {
+  color: black;
+  text-decoration: underline;
+}
+/* FOOTER - SOCIALS */
+footer {
+  padding: 0;
+  margin: 0;
+  background: #1F2041;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  font-size: 1rem;
+  color: white;
+  margin: 2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 1600px) {
+  * {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 1400px) {
+  label.CMT119{
+    font-size: 1.5rem;
+  }
+  nav ul li {
+    margin: 0 1.1vw;
+  }
+  div.main div {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  label.CMT119{
+    font-size: 1.3rem;
+    padding-left: 4vw;
+  }
+  nav ul li a{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 915px){
+  .checkbtn{
+    display: block;
+  }
+
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 80vh;
+    background: #2c3e50;
+    text-align: center;
+    top: -120vh;
+    transition: all .5s;
+  }
+
+  nav ul li{
+    display: block;
+    line-height: 20vh;
+  }
+  nav ul li a {
+    font-size: 1rem;
+  }
+  a.hover, a:active{
+    background: none;
+    color: grey;
+  }
+  #check:checked ~ ul{
+    top: 20vh;
+  }
+  /* #check:checked ~ ul li{
+    line-height: 20vh;
+   } */
+  div.main {
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+  }
+  div.main div {
+    font-size: 1.2rem;
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+    min-height: 30vh;
+    min-width: 80vw;
+  }
+  div.subhead h3 {
+    font-size: 1rem;
+  }
+
+  div.bio h3 {
+    font-size: 1rem;
+  }
+  div.answer div {
+    font-size: 0.8rem;
+  }
+  #references {
+    font-size: 0.8rem;
+  }
+
+@media (max-width: 650px){
+  label.CMT119{
+    font-size: 1rem;
+    padding-right: 2vw;
+  }
+
+  .checkbtn{
+    font-size: 1.2rem;
+  }
+  div.main div {
+    font-size: 0.7rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    min-height: 30vh;
+    min-width: 80vw;
+  }
+
+  div.answer span {
+  display: block;
+  }
+
+  div.bio {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    min-width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    max-height: 80vh;
+  }
+
+  div.bio img {
+    border-bottom: solid black;
+    border-top: solid black;
+    max-width: inherit;
+    padding: 0;
+  }
+  div.bio ul {
+    padding: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  label.CMT119{
+    font-size: 0.8rem;
+    padding-left: 2vw;
+}
+ span img {
+    max-width: 80vw;
+  }
